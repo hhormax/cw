@@ -3,6 +3,16 @@
     outline-offset: 0;
 }
 
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    margin-top: 200px;
+    margin-left: 40%;
+}
+
 .form{
     background-color: rgb(255, 255, 255);
     width: 250px;

@@ -25,42 +25,44 @@ const Login = () => {
     let navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/plus')
+        navigate('/mainPage')
     }
 
     return (
-        <div> 
-            <Formik
-                initialValues={{ 
-                    email: '', 
-                    password: '',
-                }}
-            >
-                {({ errors, touched }) => (
-                <Form className={s.form}>
-                    <div className={s.loginComponent}>
-                        <label className={s.label}>Login</label>
-                        <Field className={classnames(s.field, {[s.errorInput]: errors.email && touched.email})}
-                            name="email"
-                            placeholder="login"
-                            validate={validateEmail}/>
-                        {errors.email && touched.email && (<div className={s.error}>{errors.email}</div>)}
-                    </div>
+        <div className={s.wrapper}>
+            <div className={s.content}> 
+                <Formik
+                    initialValues={{ 
+                        email: '', 
+                        password: '',
+                    }}
+                >
+                    {({ errors, touched }) => (
+                    <Form className={s.form}>
+                        <div className={s.loginComponent}>
+                            <label className={s.label}>Login</label>
+                            <Field className={classnames(s.field, {[s.errorInput]: errors.email && touched.email})}
+                                name="email"
+                                placeholder="login"
+                                validate={validateEmail}/>
+                            {errors.email && touched.email && (<div className={s.error}>{errors.email}</div>)}
+                        </div>
 
-                    <div className={s.passComponent}>
-                        <label className={s.label}>Password</label>
-                        <Field className={classnames(s.field, {[s.errorInput]: errors.password && touched.password})}
-                            name="password"
-                            type="password"
-                            placeholder="password"
-                            validate={validatePassword}/>
-                        {errors.password && touched.password && (<div className={s.error}>{errors.password}</div>)}
-                    </div>
-                    <button onClick={handleClick} className={s.button} type="submit">Login</button>
-                </Form>
-                )}
-            </Formik>
-        </div>
+                        <div className={s.passComponent}>
+                            <label className={s.label}>Password</label>
+                            <Field className={classnames(s.field, {[s.errorInput]: errors.password && touched.password})}
+                                name="password"
+                                type="password"
+                                placeholder="password"
+                                validate={validatePassword}/>
+                            {errors.password && touched.password && (<div className={s.error}>{errors.password}</div>)}
+                        </div>
+                        <button onClick={handleClick} className={s.button} type="submit">Login</button>
+                    </Form>
+                    )}
+                </Formik>
+            </div>
+        </div>    
     )
 };
 

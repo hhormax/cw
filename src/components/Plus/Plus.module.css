@@ -1,4 +1,25 @@
-.plus {
+button{
+	padding: 0;
+	border: 1px solid rgb(0, 0, 0);
+	color: inherit;
+	background-color: transparent;
+}
+
+.sign {
+	font-size: 100px;
 	width: 150px;
 	height: 150px;
+	border-radius: 50%;
+	transition: all .4s ease;
+}
+
+
+image:hover{
+	background-color: transparent;
+	transition: .3s ease;
+}
+
+.btn{
+	margin-right: 650px;
+	margin-top: 250px;
 }

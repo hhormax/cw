@@ -1,11 +1,20 @@
 import s from './Plus.module.css';
-import plus from '../../img/plus.svg'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 const PlusBtn = () =>{
+
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/mainPage')
+    }
+
     return (
-        <img className={s.plus} src={plus} />
+        <div className={s.btn}>
+            <button onClick={handleClick} className={s.sign}>+</button>
+        </div>
+        
     )
 }
 

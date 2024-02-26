@@ -2,7 +2,7 @@ import React from "react";
 import classnames from 'classnames'
 import s from './Login.module.css'
 import { Field, Formik, Form } from "formik";
-
+import { useNavigate } from "react-router-dom";
 
 const validateEmail = value =>{
     if (!value) {
@@ -21,6 +21,13 @@ const validatePassword = value =>{
 }
 
 const Login = () => {
+
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/plus')
+    }
+
     return (
         <div> 
             <Formik
@@ -28,7 +35,6 @@ const Login = () => {
                     email: '', 
                     password: '',
                 }}
-
             >
                 {({ errors, touched }) => (
                 <Form className={s.form}>
@@ -37,7 +43,6 @@ const Login = () => {
                         <Field className={classnames(s.field, {[s.errorInput]: errors.email && touched.email})}
                             name="email"
                             placeholder="login"
-
                             validate={validateEmail}/>
                         {errors.email && touched.email && (<div className={s.error}>{errors.email}</div>)}
                     </div>
@@ -51,13 +56,12 @@ const Login = () => {
                             validate={validatePassword}/>
                         {errors.password && touched.password && (<div className={s.error}>{errors.password}</div>)}
                     </div>
-                    <button className={s.button} type="submit">Login</button>
+                    <button onClick={handleClick} className={s.button} type="submit">Login</button>
                 </Form>
                 )}
             </Formik>
         </div>
     )
 };
-  
 
 export default Login;

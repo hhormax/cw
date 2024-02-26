@@ -7,7 +7,7 @@ const PlusBtn = () =>{
     let navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/mainPage')
+        navigate('/ProjectCreationWindow')
     }
 
     return (

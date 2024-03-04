@@ -1,0 +1,16 @@
+.event {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.content {
+    margin: auto;
+    margin-top: 12px;
+}
+
+.columns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}

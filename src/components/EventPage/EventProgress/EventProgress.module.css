@@ -1,0 +1,13 @@
+.progress{
+    height: 20px;
+    width: 700px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}

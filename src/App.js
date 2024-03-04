@@ -4,7 +4,7 @@ import './App.css';
 import Login from './components/Login/Login';
 import MainPage from "./components/MainPage/MainPage";
 import ProjectCreationWindow from "./components/ProjectCreationWindow/ProjectCreationWindow";
-
+import Event from "./components/EventPage/EventPage";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Route path="/login/*" element={<Login />}/>
           <Route path="/mainPage/*" element={<MainPage />}/>
           <Route path="/projectCreationWindow/*" element={<ProjectCreationWindow />}/>
+          <Route path="/eventPage/*" element={<Event />}/>
         </Routes>                 
       </BrowserRouter>
     </div>

@@ -25,7 +25,7 @@ const ProjectCreationWindow = () => {
     let navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/')
+        navigate('/eventPage')
     }
 
     return (
@@ -57,7 +57,7 @@ const ProjectCreationWindow = () => {
                                 validate={validateBudget}/>
                             {errors.password && touched.password && (<div className={s.error}>{errors.password}</div>)}
                         </div>
-                        <button className={s.button} type="submit">Create</button>
+                        <button onClick={handleClick} className={s.button} type="submit">Create</button>
                     </Form>
                     )}
                 </Formik>

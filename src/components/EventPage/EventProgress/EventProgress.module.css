@@ -4,6 +4,7 @@
     border: 1px solid black;
     padding: 10px;
     border-radius: 20px;
+    background:     linear-gradient(to right,rgb(58, 196, 40) 30%, white 30% 100%);
 }
 
 .wrapper{

@@ -10,7 +10,7 @@ const validateName = value =>{
     } 
     else if (!/\w/.test(value)
     ) {
-        return 'Invalid email address';
+        return 'Invalid name address';
     }
 }
 
@@ -52,7 +52,7 @@ const ProjectCreationWindow = () => {
                             <label className={s.label}>Budget</label>
                             <Field className={classnames(s.field, {[s.errorInput]: errors.password && touched.password})}
                                 name="password"
-                                type="password"
+                                type="text"
                                 placeholder="budget"
                                 validate={validateBudget}/>
                             {errors.password && touched.password && (<div className={s.error}>{errors.password}</div>)}
